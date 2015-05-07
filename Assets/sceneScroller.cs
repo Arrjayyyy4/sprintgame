@@ -7,6 +7,6 @@ public class sceneScroller : MonoBehaviour {
 	//comment to test git settings
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Renderer>().material.mainTextureOffset = new Vector2(Time.time * speed, 0f);
+		renderer.material.mainTextureOffset = new Vector2(Time.time * speed, 0f);
 	}
 }

@@ -5,10 +5,14 @@ public class playerController : MonoBehaviour
 {
 	private Animator animator;
 	public float speed = 10.0f;
+
+	public GameObject fire;
+
 	// Use this for initialization
 	void Start()
 	{
-		animator = this.GetComponent<Animator>();
+		//animator = this.GetComponent<Animator>();
+		//commented out for now -Roger 5/4
 	}
 	
 	// Update is called once per frame
@@ -47,9 +51,12 @@ public class playerController : MonoBehaviour
 		}
 		if (Input.GetKeyDown ("space")) 
 		{
-			animator.SetInteger("Shooting", 1);
+			Debug.Log("space");
+
+			Instantiate(fire, GameObject.Find("bulletSpawn").transform.position, Quaternion.identity);
 
 		}
+
 		
 	}
 }
